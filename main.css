@@ -57,6 +57,14 @@ button{
     align-items: center;
 }
 
+#selections{
+    width: 200px;
+    height: 100px;
+    margin: 0px auto;
+    display: block;
+    text-align: center;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
