@@ -13,7 +13,7 @@ function numbers(){
     setTimeout(() => {
          box2 = document.getElementById('box2');
           box2.style.visibility = 'hidden';
-      }, 3000);
+      }, 1000);
     
      setTimeout(() => {
          box2 = document.getElementById('box2');
