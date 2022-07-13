@@ -15,13 +15,6 @@ function numbers(){
           box2.style.visibility = 'hidden';
       }, 3000);
      
-      
-
-      setTimeout(() => {
-         box2 = document.getElementById('box2');
-          box2.style.visibility = 'visible';
-      },);
-
 }
 
 function checkk(){
@@ -31,8 +24,8 @@ function checkk(){
     }else if(y == ""){
         alert('insert number')
     }else if(y == x){
-        alert('good')
+        alert('Correct number')
     }else{
-        alert('bad')
+        alert('Wrong number')
     }
 }

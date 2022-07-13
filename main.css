@@ -4,22 +4,25 @@
 }
 
 #box{
-    width: 80%;
+    width: 30%;
     height: 100px;
     background-color: aqua;
     margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid black;
 }
 #box2{
-    width: 20%;
     height: 50px;
     background-color: aqua;
     margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+
 }
 button{
     width: 100px;
@@ -31,23 +34,13 @@ button{
     align-items: center;
 }
 
-#box3{
-    width: 80%;
-    height: 100px;
-    background-color: aqua;
-    margin: 0px auto;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
 
-}
 #check{
     width: 20%;
     height: 50px;
-    background-color: red;
-    margin: 20px auto;
+    background-color: aqua;
+    margin: 00px auto;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center; 
