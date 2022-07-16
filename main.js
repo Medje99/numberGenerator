@@ -34,17 +34,37 @@ function numbers(){
    
 }
 
+let score = document.getElementById('score');
+score = 0;
+
+let sc = document.getElementById('numbers');
+
+
+
+
+
+
+
 function checkk(){
     let y = input.value;
+    
     if(x == ""){
         alert("Click on 'Get number!")
     }else if(y == ""){
         alert('insert number')
     }else if(y == x){
-        alert('Correct number')
+        alert('Correct number, wait 3s for new number')
+        setTimeout(numbers, 2000);
+        score++
+        return sc.innerText = score;
     }else{
-        alert('Wrong number')
+        alert('Wrong number, wait 3s for new number')
+        setTimeout(numbers, 2000);
+        return sc.innerText = 0;
     }
+    
+    
+    
 }
 
 
