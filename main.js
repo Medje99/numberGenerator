@@ -5,32 +5,52 @@ let selected = document.getElementById('digits');
 
 let x = 0;
 
+
+function displayOff(){
+    box2 = document.getElementById('box2');
+    box2.style.visibility = 'hidden';
+}
+
+function displayOn(){
+    box2 = document.getElementById('box2');
+    box2.style.visibility = 'visible';
+}
+
+
 function numbers(){ 
     
     document.getElementById('submit').disabled = false;
+    let timer = document.getElementById('selectTime')
+    var timetime = 0;
 
-    setTimeout(() => {
-        box2 = document.getElementById('box2');
-         box2.style.visibility = 'hidden';
-     }, 100);
+    if(timer.value == "a"){
+        timetime = 1000;
+    }else if(timer.value == "b"){
+        timetime = 2000
+    }else if(timer.value == "c"){
+        timetime = 3000
+    }else if(timer.value == "d"){
+        timetime = 4000
+    }
+
+
+
+    setTimeout(displayOff, timetime);
     
-     setTimeout(() => {
-        box2 = document.getElementById('box2');
-         box2.style.visibility = 'visible';
-     },);
+    displayOn()
 
     if(selected.value == "3"){
         x = Math.floor(Math.random() * 900) + 100;
-        return box2.innerHTML = x;
+         box2.innerHTML = x;
     }else if(selected.value == "4"){
         x = Math.floor(Math.random() * 9000) + 1000;
-        return box2.innerHTML = x;
+         box2.innerHTML = x;
     }else if(selected.value == "5"){
         x = Math.floor(Math.random() * 90000) + 10000;
-        return box2.innerHTML = x;
+         box2.innerHTML = x;
     }else if(selected.value == "6"){
         x = Math.floor(Math.random() * 900000) + 100000;
-        return box2.innerHTML = x;
+         box2.innerHTML = x;
     }
     
     

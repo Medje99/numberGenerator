@@ -59,10 +59,11 @@ button{
 
 #selections{
     width: 200px;
-    height: 100px;
+    height: 200px;
     margin: 0px auto;
     display: block;
     text-align: center;
+    
 }
 
 input::-webkit-outer-spin-button,
