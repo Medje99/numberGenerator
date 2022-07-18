@@ -60,7 +60,8 @@ function checkk(){
     }else{
         alert('Wrong number, wait 3s for new number')
         setTimeout(numbers, 2000);
-        return sc.innerText = 0;
+        score = 0;
+        return sc.innerText = score;
     }
     
     
