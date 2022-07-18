@@ -7,6 +7,8 @@ let x = 0;
 
 function numbers(){ 
     
+    document.getElementById('submit').disabled = false;
+
     setTimeout(() => {
         box2 = document.getElementById('box2');
          box2.style.visibility = 'hidden';
@@ -31,6 +33,8 @@ function numbers(){
         return box2.innerHTML = x;
     }
     
+    
+
    
 }
 
@@ -47,25 +51,21 @@ let sc = document.getElementById('numbers');
 
 function checkk(){
     let y = input.value;
+    document.getElementById('submit').disabled = true;
     
     if(x == ""){
         alert("Click on 'Get number!")
     }else if(y == ""){
         alert('insert number')
     }else if(y == x){
-        alert('Correct number, wait 3s for new number')
-        setTimeout(numbers, 2000);
+        alert('Correct number, click "Get number" to continue')
         score++
-        return sc.innerText = score;
+        sc.innerText = score;
     }else{
-        alert('Wrong number, wait 3s for new number')
-        setTimeout(numbers, 2000);
+        alert('Wrong number, click "Get number" to continue')
         score = 0;
-        return sc.innerText = score;
-    }
-    
-    
-    
+         sc.innerText = score;
+    } 
 }
-
-
+ 
+    
