@@ -24,13 +24,13 @@ function numbers(){
     var timetime = 0;
 
     if(timer.value == "a"){
-        timetime = 1000;
+        timetime = 250;
     }else if(timer.value == "b"){
-        timetime = 2000
+        timetime = 500
     }else if(timer.value == "c"){
-        timetime = 3000
+        timetime = 750
     }else if(timer.value == "d"){
-        timetime = 4000
+        timetime = 1000
     }
 
 
@@ -89,3 +89,8 @@ function checkk(){
 }
  
     
+function tutorial(){
+    alert('The goal of this exercise is to type the same number that you got after clicking "Get number", and collect as many points as possible')
+    alert('You can choose the difficulty of the task by changing the number of digits and digits display time.')
+
+}
