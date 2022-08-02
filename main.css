@@ -1,123 +1,30 @@
-*{
-    padding: 0px;
+body{
     margin: 0px;
-}
-#wrapp{
-    width: 60%;
-    margin: 0px auto;
-    background-color: red;
-}
-#box{
-    width: 15%;
-    height: 70px;
-    background-color: aqua;
-    margin: 0px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
+    padding: 0px;
+    height: 100vh;
 }
 #box2{
-    height: 50px;
-    background-color: aqua;
-    margin: 0px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
-
+    height: 60px;
 }
-button{
-    width: 100px;
-    height: 50px;
-    border: 2px solid black;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#digits{
+    margin-right: 110px;
 }
-
-
+#selectTime{
+    margin-left: 100px;
+}
 #check{
-    width: 20%;
-    height: 50px;
-    background-color: aqua;
-    margin: 0px auto;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
     text-align: center;
 }
-
-#submit{
-    width: 100px;
-    height: 50px;
-    border: 2px solid black;
-    margin: 0px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#selections{
-    width: 200px;
-    height: 200px;
-    margin: 0px auto;
-    display: block;
-    text-align: center;
-    
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-#score{
-    width: 200px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid red;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-#numbers{
-    color: red;
-    font-size: 20px;
+#box3{
+    font-size: 30px;
     font-weight: bold;
+    height: 60px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
-#tutorial{
-    display: flex;
-    flex-direction: column;
-    margin: 50px;
-    width: 100px;
-    height: 100px;
-    position: fixed;
-    justify-content: flex-start;
-}
-
-#wrapp-1{
-    margin: 0px;
-    width: 20%;
-    height: 100vh;
-    float: left;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-#wrapp-2{
-    margin: 0px;
-    width: 20%;
-    height: 100vh;
-    float: right;
-    background-color: rgba(0, 0, 0, 0.3);
-    
-
-}

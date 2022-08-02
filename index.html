@@ -1,91 +1,124 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 
-<link rel="stylesheet" href="main.css">
-<head>
-  <title>NumberGenerator</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
+    <title>Bootstrap Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body class="bg-dark text-info">
 
-<body>
-  
-
-      <div id="wrapp-1">
     
-    <div id="tutorial">
-    <button type="button" onclick="tutorial()">Tutorial</button><br><br>
-    </div>
+    <nav class="p-3 navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <a class="navbar-brand text-info" href="#">Game</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarNav">
+          <ul class="navbar-nav">
+            <form class="container-fluid justify-content-start ">
+              <button class="btn btn-sm btn-outline-secondary text-info border border-info m-3" type="button" onclick="tutorial()">Tutorial</button>
+              <button class="btn btn-sm btn-outline-secondary text-info border border-info m-3" type="button" onclick="infoNum()">Numbers Info</button>
+              <button class="btn btn-sm btn-outline-secondary text-info border border-info m-3" type="button" onclick="infoTime()">Time Info</button>
+            </form>       
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-        </div>  
-
-      <div id="wrapp-2"></div>
-
-  
-     <div id="wrapp">
-            
-            <div id="box">
-               <div id="box2"></div>
-            </div>
+    <div class="container-fluid text-center ">
       
-     </div>
+      
+      <div class="row">
+        <div class="p-5 col  d-flex align-items-end flex-column ">
+            <p style="margin-right: 50px;">Select number of digits</p>
           
- 
-    <div id="selections">
-      <p>Select number of digits</p>
-          
-          
-          <select id="digits" >
-         
-          <option value="3" >3</option>
-          <option value="4" >4</option>
-          <option value="5" >5</option>
-          <option value="6" >6</option>  
+            <select id="digits" class="">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>  
+            
           </select>
-          <br><br>
-          
-          <p>Select digits showing</p>
+        </div>
+
+
+        <div class="p-5 col d-flex align-items-start flex-column">
+          <p style="margin-left: 50px">Select digits showing</p>
           <select id="selectTime">
+            
             <option value="a">0.25s</option>
             <option value="b">0.5s</option>
             <option value="c">0.75s</option>
             <option value="d">1s</option>
-            </select>
             
-          <button type="button" onclick="numbers()" id="btnNumbers">Get number!</button><br><br>
-    </div>
-     
-    <div>
+          </select>
+        </div>
+      </div>
 
-      <input type="text" id="check" value="">
-      <br><br>
-       
-       <input type="submit" id="submit" value="Submit" onclick="checkk()">
-    
-       <div id="score">
-         <p id="numbers"></p>
-       </div>
+      <div class="row first ">
+        <div class="p-5 col ">
+          <div class="grid text-center d-flex justify-content-center ">
+            <div class="g-col-2 " id="box2">
+                ***
+            </div>
+          </div>
+        </div>
+      </div>
 
-    </div>
+
+
+      <div class="row">
+        <div class="p-5 col pt-0">
+          <button type="button" onclick="numbers()" id="btnNumbers">Get a number!</button>
+        </div>
+
+      </div>
+      <div class="row first">
+        <div class="p-5 col ">
+          <div class="grid text-center d-flex justify-content-center">
+            <div class="g-col-2" >
+              <input type="number" id="check" value="" class="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row first">
+        <div class="p-5 col">
+          <div class="grid text-center d-flex justify-content-center">
+            <div class="g-col-2" >
+              <input type="submit" id="submit" value="Submit" onclick="checkk()" >
+            </div>
+          </div>
+        </div>
+      </div>
       
+      <div class="row first">
+        <div class="p-5 col">
+          <div class="grid text-center d-flex justify-content-center">
+            <div class="g-col-2" id="box3">
+              <div id="score">
+                <p>Score</p>
+                <p id="numbers"></p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-    <script src="main.js"></script>
-
-  </body>
+    
+    
+    
+    
+    
+    
+  <script src="main.js"></script>    
+ </body>
 </html>
-
-
-<!--
-
-    -For harder level more points
-    -Lower time more poits
-    -Register&Login
-    -Highscore board
-    -Better design
-    -Sound effects
-    -Green light for correct, Red for incorrect
-
-
-
-
--->
