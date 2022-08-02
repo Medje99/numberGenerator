@@ -4,24 +4,32 @@
 <link rel="stylesheet" href="main.css">
 <head>
   <title>NumberGenerator</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
-  <div id="tutorial">
+  
+
+      <div id="wrapp-1">
+    
+    <div id="tutorial">
     <button type="button" onclick="tutorial()">Tutorial</button><br><br>
-  </div>  
-
-    <div id="box">
-        
-
-        <div id="box2">
-          
-          
-        </div>
-        
     </div>
 
-    
+        </div>  
+
+      <div id="wrapp-2"></div>
+
+  
+     <div id="wrapp">
+            
+            <div id="box">
+               <div id="box2"></div>
+            </div>
+      
+     </div>
+          
+ 
     <div id="selections">
       <p>Select number of digits</p>
           
@@ -35,7 +43,7 @@
           </select>
           <br><br>
           
-          <p>Select digits display time</p>
+          <p>Select digits showing</p>
           <select id="selectTime">
             <option value="a">0.25s</option>
             <option value="b">0.5s</option>
@@ -43,19 +51,41 @@
             <option value="d">1s</option>
             </select>
             
-          <button type="button" onclick="numbers()">Get number!</button><br><br>
+          <button type="button" onclick="numbers()" id="btnNumbers">Get number!</button><br><br>
     </div>
      
+    <div>
+
       <input type="text" id="check" value="">
-   <br><br>
+      <br><br>
+       
+       <input type="submit" id="submit" value="Submit" onclick="checkk()">
     
-    <input type="submit" id="submit" value="Submit" onclick="checkk()">
- 
-    <div id="score">
-      <p id="numbers"></p>
+       <div id="score">
+         <p id="numbers"></p>
+       </div>
+
     </div>
+      
 
 
     <script src="main.js"></script>
-</body>
+
+  </body>
 </html>
+
+
+<!--
+
+    -For harder level more points
+    -Lower time more poits
+    -Register&Login
+    -Highscore board
+    -Better design
+    -Sound effects
+    -Green light for correct, Red for incorrect
+
+
+
+
+-->

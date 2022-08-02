@@ -1,35 +1,35 @@
-let box = document.getElementById('box');
-let box2 = document.getElementById('box2');
-let input = document.getElementById('check');
-let selected = document.getElementById('digits');
-
-let x = 0;
+let box2 = $('#box2');
+let input = $('#check');
+let selected = $('#digits');
+let btnNumbers = $('#btnNumbers');
+let submit= $('#submit');
 
 
 function displayOff(){
-    box2 = document.getElementById('box2');
-    box2.style.visibility = 'hidden';
+    let box2 = $('#box2');
+    box2.css('visibility','hidden')
 }
 
 function displayOn(){
-    box2 = document.getElementById('box2');
-    box2.style.visibility = 'visible';
+    let box2 = $('#box2');
+    box2.css('visibility','visible')
+
 }
 
-
-function numbers(){ 
+btnNumbers.on('click', function () {
     
-    document.getElementById('submit').disabled = false;
-    let timer = document.getElementById('selectTime')
+    submit.removeAttr('disabled');
+    
+    let timer = $('#selectTime');
     var timetime = 0;
 
-    if(timer.value == "a"){
+    if(timer.val() == "a"){
         timetime = 250;
-    }else if(timer.value == "b"){
+    }else if(timer.val() == "b"){
         timetime = 500
-    }else if(timer.value == "c"){
+    }else if(timer.val() == "c"){
         timetime = 750
-    }else if(timer.value == "d"){
+    }else if(timer.val() == "d"){
         timetime = 1000
     }
 
@@ -39,39 +39,34 @@ function numbers(){
     
     displayOn()
 
-    if(selected.value == "3"){
+    if(selected.val() == "3"){
         x = Math.floor(Math.random() * 900) + 100;
-         box2.innerHTML = x;
-    }else if(selected.value == "4"){
+         box2.html(x)
+    }else if(selected.val() == "4"){
         x = Math.floor(Math.random() * 9000) + 1000;
-         box2.innerHTML = x;
-    }else if(selected.value == "5"){
+        box2.html(x)
+    }else if(selected.val() == "5"){
         x = Math.floor(Math.random() * 90000) + 10000;
-         box2.innerHTML = x;
-    }else if(selected.value == "6"){
+        box2.html(x)
+    }else if(selected.val() == "6"){
         x = Math.floor(Math.random() * 900000) + 100000;
-         box2.innerHTML = x;
+        box2.html(x)
+
     }
-    
-    
+})
 
-   
-}
 
-let score = document.getElementById('score');
+
+let score = $('#score')
 score = 0;
 
-let sc = document.getElementById('numbers');
+let sc = $('#numbers')
 
 
-
-
-
-
-
-function checkk(){
-    let y = input.value;
-    document.getElementById('submit').disabled = true;
+submit.on('click', function () {
+    
+    let y = input.val();
+    submit.attr('disabled','disabled');
     
     if(x == ""){
         alert("Click on 'Get number!")
@@ -80,13 +75,21 @@ function checkk(){
     }else if(y == x){
         alert('Correct number, click "Get number" to continue')
         score++
-        sc.innerText = score;
+        sc.text(`${score}`);
     }else{
         alert('Wrong number, click "Get number" to continue')
         score = 0;
-         sc.innerText = score;
+        sc.text(`${score}`);
+
     } 
-}
+
+    
+});
+
+
+
+
+    
  
     
 function tutorial(){

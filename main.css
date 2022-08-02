@@ -2,12 +2,16 @@
     padding: 0px;
     margin: 0px;
 }
-
+#wrapp{
+    width: 60%;
+    margin: 0px auto;
+    background-color: red;
+}
 #box{
-    width: 30%;
-    height: 100px;
+    width: 15%;
+    height: 70px;
     background-color: aqua;
-    margin: 20px auto;
+    margin: 0px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +20,7 @@
 #box2{
     height: 50px;
     background-color: aqua;
-    margin: 20px auto;
+    margin: 0px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +43,7 @@ button{
     width: 20%;
     height: 50px;
     background-color: aqua;
-    margin: 00px auto;
+    margin: 0px auto;
     margin-top: 50px;
     display: flex;
     justify-content: center;
@@ -99,4 +103,21 @@ input::-webkit-inner-spin-button {
     height: 100px;
     position: fixed;
     justify-content: flex-start;
+}
+
+#wrapp-1{
+    margin: 0px;
+    width: 20%;
+    height: 100vh;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#wrapp-2{
+    margin: 0px;
+    width: 20%;
+    height: 100vh;
+    float: right;
+    background-color: rgba(0, 0, 0, 0.3);
+    
+
 }
