@@ -102,21 +102,17 @@ submit.on('click', function () {
         input.removeClass('btn btn-outline-danger').removeClass('btn btn-outline-info').addClass('btn btn-outline-success')
 
         if(selected.val() == 3){
-            alert('Correct number, click "Get number" to continue')
             score += 0.5;
             sc.text(`${score}`);
         }else if(selected.val() == 4){
-            alert('Correct number, click "Get number" to continue')
             score++;
             sc.text(`${score}`);
         }
         else if(selected.val() == 5){
-            alert('Correct number, click "Get number" to continue')
             score += 1.5;
             sc.text(`${score}`);
         }
-        else if(selected.val() == 6){
-            alert('Correct number, click "Get number" to continue')
+        else if(selected.val() == 6){  
             score += 2;
             sc.text(`${score}`);
         };
