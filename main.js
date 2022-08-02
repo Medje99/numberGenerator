@@ -150,7 +150,6 @@ submit.on('click', function () {
 function tutorial(){
     alert('The goal of this exercise is to type the same number that you get after clicking "Get number", and collect as many points as possible')
     alert('You can choose the difficulty of the task by changing the number of digits and digits display time.')
-    alert( '0.5 Points for 1s\n1 Points for 0.75s')
 
 }
 
