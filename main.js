@@ -3,6 +3,7 @@ let input = $('#check');
 let selected = $('#digits');
 let btnNumbers = $('#btnNumbers');
 let submit= $('#submit');
+var numbers = $('#numbers');
 let x;
 
 
@@ -37,6 +38,8 @@ function displayOn(){
 
 btnNumbers.on('click', function () {
     input.removeClass('btn btn-outline-danger').addClass('btn btn-outline-info')
+    numbers.removeClass('text-danger').addClass('text-info')
+    
     submit.removeAttr('disabled');
     
     let timer = $('#selectTime');
@@ -100,6 +103,7 @@ submit.on('click', function () {
     }else if(y == x){
 
         input.removeClass('btn btn-outline-danger').removeClass('btn btn-outline-info').addClass('btn btn-outline-success')
+        numbers.removeClass('text-danger').removeClass('text-info').addClass('text-success')
 
         if(selected.val() == 3){
             score += 0.5;
@@ -112,7 +116,7 @@ submit.on('click', function () {
             score += 1.5;
             sc.text(`${score}`);
         }
-        else if(selected.val() == 6){  
+        else if(selected.val() == 6){
             score += 2;
             sc.text(`${score}`);
         };
@@ -132,6 +136,7 @@ submit.on('click', function () {
         }
     }else{
         input.removeClass('btn btn-outline-info').addClass('btn btn-outline-danger')
+        numbers.removeClass('text-info').addClass('text-danger')
         score = 0;
         sc.text(`${score}`);
 
