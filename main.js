@@ -6,7 +6,7 @@ let submit= $('#submit');
 let x;
 
 
-  selected.on('click', function gg(){
+  selected.on('click', function (){
     let box2 = $('#box2');
     box2.css('visibility','visible')
 
@@ -36,7 +36,7 @@ function displayOn(){
 
 
 btnNumbers.on('click', function () {
-    
+    input.removeClass('btn btn-outline-danger').addClass('btn btn-outline-info')
     submit.removeAttr('disabled');
     
     let timer = $('#selectTime');
@@ -91,11 +91,15 @@ submit.on('click', function () {
 
     submit.attr('disabled','disabled');
     
+    
+
     if(isNaN(x)){
         alert("Click on 'Get a number!")
     }else if(y == ""){
         alert('insert number')
     }else if(y == x){
+
+        input.removeClass('btn btn-outline-danger').removeClass('btn btn-outline-info').addClass('btn btn-outline-success')
 
         if(selected.val() == 3){
             alert('Correct number, click "Get number" to continue')
@@ -131,8 +135,7 @@ submit.on('click', function () {
             sc.text(`${score}`);
         }
     }else{
-        
-        alert('Wrong number, click "Get number" to continue')
+        input.removeClass('btn btn-outline-info').addClass('btn btn-outline-danger')
         score = 0;
         sc.text(`${score}`);
 
@@ -150,6 +153,8 @@ submit.on('click', function () {
 function tutorial(){
     alert('The goal of this exercise is to type the same number that you get after clicking "Get number", and collect as many points as possible')
     alert('You can choose the difficulty of the task by changing the number of digits and digits display time.')
+    alert( '0.5 Points for 1s\n1 Points for 0.75s')
+
 }
 
 function infoTime(){
