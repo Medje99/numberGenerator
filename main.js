@@ -154,7 +154,7 @@ function tutorial(){
 
 }
 
-function infoNum(){
+function infoTime(){
     alert( '0.5 Points for 1s\n1 Points for 0.75s\n1.5 Points for 0.5s\n2 Points for 0.25s')
 }
 
